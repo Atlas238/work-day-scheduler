@@ -58,11 +58,9 @@ let keys = [
 var userSave = [];
 
 // This displays the current day (Currently not showing up? Check during 9-5hours?)
-
-console.log(moment().format("dddd [the] Do [of] MMMM YYYY"))
+$("#currentDay").text(moment().format("dddd [the] Do [of] MMMM  YYYY"));
 
 $(document).ready(function(){
-    currentDay.textContent = moment().format("dddd [the] Do [of] MMMM  YYYY");
     for (let i = 0; i < keys.length; i++) {
         textArr[i].val(JSON.parse(localStorage.getItem(keys[i])));
     }
@@ -74,6 +72,7 @@ function timeofdayCheck() {
   // Past...
   if (currentTime > 1000) {
       nineAmText.removeClass();
+      nineAmRow.removeClass();
       nineAmRow.addClass("past");
       nineAmText.addClass("past");
     }
