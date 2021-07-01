@@ -58,9 +58,11 @@ let keys = [
 var userSave = [];
 
 // This displays the current day (Currently not showing up? Check during 9-5hours?)
-currentDay.textContent = moment().format("dddd [the] Do [of] MMMM  YYYY");
+
+console.log(moment().format("dddd [the] Do [of] MMMM YYYY"))
 
 $(document).ready(function(){
+    currentDay.textContent = moment().format("dddd [the] Do [of] MMMM  YYYY");
     for (let i = 0; i < keys.length; i++) {
         textArr[i].val(JSON.parse(localStorage.getItem(keys[i])));
     }

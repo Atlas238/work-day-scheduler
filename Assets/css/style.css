@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  
 }
 
 textarea {
@@ -59,24 +60,26 @@ textarea {
 }
 
 #icon {
-  display:flex;
+  display:flex;;
   justify-content: center;
   max-width: fit-content;
   margin-left: 35%;
   opacity: 0.6;
-  transition: transform 500ms ease;
   transition: opacity 1000ms ease;
+  transition: transform 500ms ease;
 }
 
 #icon:hover {
   transform: scale(1.1);
+  color:black;
   opacity: 1;
   transition: opacity 1000ms ease;
+  transition: transform 500ms ease;
 }
 
 #icon:active {
   transform: scale(0.85);
-  transition: transform 200ms ease;
+  transition: transform 200ms ease-in-out;
 }
 
 textarea {
@@ -85,3 +88,9 @@ textarea {
   border-radius: 5px;
   color:black !important;
 }
+
+td, th {
+  background-color: whitesmoke !important;
+  color:gray;
+}
+
